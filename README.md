@@ -302,7 +302,6 @@ If this work is useful in academic research, please cite the master's thesis:
 ```
 
 **Advisor:** Bektemessov Amanzhol  
-**Domestic scientific consultant:** Ualiyeva Irina Maratovna  
 **Department:** Computer Science, Faculty of Information Technologies and Artificial Intelligence  
 **Educational program:** 7M06116 — Computer Science and Technology
 
