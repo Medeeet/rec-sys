@@ -1,0 +1,13 @@
+seed: 42
+device: auto
+
+paths:
+  project_root: .
+  data_dir: data
+  output_dir: outputs
+  checkpoint_dir: outputs/checkpoints
+  figures_dir: outputs/figures
+
+logging:
+  level: INFO
+  mlflow_tracking_uri: outputs/mlruns

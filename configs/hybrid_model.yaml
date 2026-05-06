@@ -1,0 +1,39 @@
+model:
+  name: AdaptiveHybridModel
+  embed_dim: 64
+
+  static:
+    mlp_layers: [128, 64]
+
+  dynamic:
+    hidden_dim: 128
+    num_layers: 2
+    dropout: 0.1
+    max_seq_len: 50
+
+  content:
+    hidden_dims: [512, 256]
+    dropout: 0.2
+
+  attention:
+    hidden_dim: 64
+
+  # Ablation flags
+  use_dynamic: true
+  use_content: true
+  use_attention: true
+
+training:
+  epochs: 50
+  batch_size: 1024
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  optimizer: adam
+  scheduler: cosine
+  early_stopping_patience: 5
+  loss: bpr
+
+evaluation:
+  metrics: [Recall, NDCG, Precision]
+  topk: [10]
+  eval_batch_size: 2048
